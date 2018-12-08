@@ -19,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
     TextView tvExp;
 
     private static String expression = "";
-    private double res;
+    private boolean mistake;
+    private String res;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,6 +113,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 expression += " = " + eval(expression);
+                if (mistake){
+                    expression = "";
+                }
+                mistake = false;
                 tvExp.setText(expression);
             }
         });
@@ -155,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
         btnPi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                expression += "3.1415";
+                expression += String.valueOf(Math.PI);
                 tvExp.setText(expression);
             }
         });
@@ -248,12 +253,17 @@ public class MainActivity extends AppCompatActivity {
         tvExp = findViewById(R.id.tvExp);
     }
 
-    private double eval(String expression) {
+    private strictfp String eval(String expression) {
+        double val;
+        mistake = false;
         try {
             Expression e = new ExpressionBuilder(expression).build();
-            res = e.evaluate();
+            val = e.evaluate();
+            res = String.format("%.4f", val);
+
         } catch (Exception e) {
             Toast.makeText(getApplicationContext(), "Oops, wrong expression", Toast.LENGTH_SHORT).show();
+            mistake = true;
         }
         return res;
     }
