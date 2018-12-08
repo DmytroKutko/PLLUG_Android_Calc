@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         tvExp.setText(expression);
     }
 
-    private void btnOnClick(){
+    private void btnOnClick() {
         btnOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -145,7 +146,9 @@ public class MainActivity extends AppCompatActivity {
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                expression = expression.substring(0, expression.length() - 1);
+                if (expression.length() != 0) {
+                    expression = expression.substring(0, expression.length() - 1);
+                }
                 tvExp.setText(expression);
             }
         });
@@ -246,8 +249,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private double eval(String expression) {
-        Expression e = new ExpressionBuilder(expression).build();
-        res = e.evaluate();
+        try {
+            Expression e = new ExpressionBuilder(expression).build();
+            res = e.evaluate();
+        } catch (Exception e) {
+            Toast.makeText(getApplicationContext(), "Oops, wrong expression", Toast.LENGTH_SHORT).show();
+        }
         return res;
     }
 }
