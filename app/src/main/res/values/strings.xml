@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PLLUG_calc</string>
+    <string name="enter_expression_here">enter expression here</string>
+</resources>
