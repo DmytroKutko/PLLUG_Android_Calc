@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     static List<String> history;
 
-    private static String expression = "";
+    String expression = "";
     private boolean mistake;
     private String res;
 
@@ -118,13 +118,14 @@ public class MainActivity extends AppCompatActivity {
         btnResult.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                expression += " = " + eval(expression);
-                if (mistake) {
-                    expression = "";
-                }
-                mistake = false;
-                tvExp.setText(expression);
-                if (expression != "") {
+                String result;
+                expression = tvExp.getText().toString();
+                result = Calc.eval(expression);
+                expression += " = " + result;
+                if (result == "") {
+                    tvExp.setText("Error !!!");
+                } else {
+                    tvExp.setText(expression);
                     history.add(expression);
                 }
             }
@@ -269,20 +270,5 @@ public class MainActivity extends AppCompatActivity {
         btnHistory = findViewById(R.id.btnHistory);
         history = new ArrayList<>();
         tvExp = findViewById(R.id.tvExp);
-    }
-
-    private strictfp String eval(String expression) {
-        double val;
-        mistake = false;
-        try {
-            Expression e = new ExpressionBuilder(expression).build();
-            val = e.evaluate();
-            res = String.format("%.4f", val);
-
-        } catch (Exception e) {
-            Toast.makeText(getApplicationContext(), "Oops, wrong expression", Toast.LENGTH_SHORT).show();
-            mistake = true;
-        }
-        return res;
     }
 }
