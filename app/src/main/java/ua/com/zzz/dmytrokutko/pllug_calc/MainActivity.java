@@ -1,5 +1,6 @@
 package ua.com.zzz.dmytrokutko.pllug_calc;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,13 +11,18 @@ import android.widget.Toast;
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     Button btnOne, btnTwo, btnThree, btnFour, btnFive, btnSix, btnSeven, btnEight, btnNine, btnZero,
             btnPoint, btnResult, btnDiv, btnDelete, btnPi, btnMult, btnLScope, btnRScope, btnMinus,
-            btnSin, btnCos, btnPlus, btnTg, btnClear, btnPow, btnSquare;
+            btnSin, btnCos, btnPlus, btnTg, btnClear, btnPow, btnSquare, btnHistory;
 
     TextView tvExp;
+
+    static List<String> history;
 
     private static String expression = "";
     private boolean mistake;
@@ -113,11 +119,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 expression += " = " + eval(expression);
-                if (mistake){
+                if (mistake) {
                     expression = "";
                 }
                 mistake = false;
                 tvExp.setText(expression);
+                if (expression != "") {
+                    history.add(expression);
+                }
             }
         });
         btnDiv.setOnClickListener(new View.OnClickListener() {
@@ -220,6 +229,13 @@ public class MainActivity extends AppCompatActivity {
                 tvExp.setText(expression);
             }
         });
+        btnHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, History.class);
+                startActivity(intent);
+            }
+        });
         tvExp.setText(expression);
     }
 
@@ -250,6 +266,8 @@ public class MainActivity extends AppCompatActivity {
         btnClear = findViewById(R.id.btnClear);
         btnPow = findViewById(R.id.btnPow);
         btnSquare = findViewById(R.id.btnSquare);
+        btnHistory = findViewById(R.id.btnHistory);
+        history = new ArrayList<>();
         tvExp = findViewById(R.id.tvExp);
     }
 

@@ -15,7 +15,7 @@
         android:layout_marginRight="5dp"
         android:layout_marginBottom="5dp"
         android:text=""
-        android:textSize="18sp"/>
+        android:textSize="20sp" />
 
     <TableLayout
         android:layout_width="match_parent"
@@ -266,13 +266,28 @@
                 android:id="@+id/btnPow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="5dp"
                 android:text="^" />
 
             <Button
                 android:id="@+id/btnSquare"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="5dp"
                 android:text="√" />
+
+            <Button
+                android:id="@+id/btnHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="5dp"
+                android:text="History" />
         </TableRow>
     </TableLayout>
 

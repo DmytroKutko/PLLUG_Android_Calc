@@ -16,7 +16,7 @@
         android:layout_marginRight="5dp"
         android:layout_marginBottom="5dp"
         android:text=""
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -34,32 +34,32 @@
                 android:id="@+id/btnOne"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
                 android:text="1" />
 
             <Button
                 android:id="@+id/btnTwo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
                 android:text="2" />
 
             <Button
                 android:id="@+id/btnThree"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
                 android:text="3" />
 
             <Button
                 android:id="@+id/btnDiv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
                 android:text="/" />
 
         </TableRow>
@@ -72,32 +72,32 @@
                 android:id="@+id/btnFour"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
                 android:text="4" />
 
             <Button
                 android:id="@+id/btnFive"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
                 android:text="5" />
 
             <Button
                 android:id="@+id/btnSix"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
                 android:text="6" />
 
             <Button
                 android:id="@+id/btnMult"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
                 android:text="*" />
 
         </TableRow>
@@ -110,32 +110,32 @@
                 android:id="@+id/btnSeven"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
                 android:text="7" />
 
             <Button
                 android:id="@+id/btnEight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
                 android:text="8" />
 
             <Button
                 android:id="@+id/btnNine"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
                 android:text="9" />
 
             <Button
                 android:id="@+id/btnMinus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
                 android:text="-" />
 
         </TableRow>
@@ -148,32 +148,32 @@
                 android:id="@+id/btnPoint"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
                 android:text="." />
 
             <Button
                 android:id="@+id/btnZero"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
                 android:text="0" />
 
             <Button
                 android:id="@+id/btnResult"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
                 android:text="=" />
 
             <Button
                 android:id="@+id/btnPlus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
                 android:text="+" />
 
         </TableRow>
@@ -184,32 +184,32 @@
                 android:id="@+id/btnPow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
                 android:text="^" />
 
             <Button
                 android:id="@+id/btnSquare"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
                 android:text="√" />
 
             <Button
                 android:id="@+id/btnPi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
                 android:text="π" />
 
             <Button
                 android:id="@+id/btnDelete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
                 android:text="Del" />
         </TableRow>
 
@@ -221,32 +221,32 @@
                 android:id="@+id/btnSin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
                 android:text="sin" />
 
             <Button
                 android:id="@+id/btnCos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
                 android:text="cos" />
 
             <Button
                 android:id="@+id/btnLScope"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
                 android:text="(" />
 
             <Button
                 android:id="@+id/btnRScope"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
                 android:text=")" />
         </TableRow>
 
@@ -258,17 +258,25 @@
                 android:id="@+id/btnTg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
                 android:text="tg" />
 
             <Button
                 android:id="@+id/btnClear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
                 android:text="C" />
+
+            <Button
+                android:id="@+id/btnHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:text="History" />
         </TableRow>
     </TableLayout>
 
