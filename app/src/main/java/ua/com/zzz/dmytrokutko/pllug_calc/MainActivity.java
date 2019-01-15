@@ -1,15 +1,11 @@
 package ua.com.zzz.dmytrokutko.pllug_calc;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import net.objecthunter.exp4j.Expression;
-import net.objecthunter.exp4j.ExpressionBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,19 +21,22 @@ public class MainActivity extends AppCompatActivity {
     static List<String> history;
 
     String expression = "";
-    private boolean mistake;
-    private String res;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        init();
-        btnOnClick();
+
+        setInitialData();
+    }
+
+    private void setInitialData() {
+        initView();
+        initListener();
         tvExp.setText(expression);
     }
 
-    private void btnOnClick() {
+    private void initListener() {
         btnOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -240,7 +239,7 @@ public class MainActivity extends AppCompatActivity {
         tvExp.setText(expression);
     }
 
-    private void init() {
+    private void initView() {
         btnOne = findViewById(R.id.btnOne);
         btnTwo = findViewById(R.id.btnTwo);
         btnThree = findViewById(R.id.btnThree);
